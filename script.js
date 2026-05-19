@@ -244,3 +244,20 @@ for(let t of floatingText){
 var s = document.readyState;
 if (s === 'complete' || s === 'loaded' || s === 'interactive') init();
 else document.addEventListener('DOMContentLoaded', init, false);
+
+// Phát nhạc khi người dùng chạm/click lần đầu
+document.addEventListener(
+'click',
+function(){
+
+let music =
+document.getElementById(
+'bgmusic'
+);
+
+music.play();
+
+},
+{ once:true }
+
+);
